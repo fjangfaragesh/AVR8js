@@ -169,11 +169,11 @@ executable.
 
 __Try it on LiaScript:__
 
-https://liascript.github.io/course/?https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
+https://liascript.github.io/course/?https://raw.githubusercontent.com/fjangfaragesh/AVR8js/main/README.md
 
 __See the project on Github:__
 
-https://github.com/liaTemplates/AVR8js
+https://github.com/fjangfaragesh/AVR8js
 
           --{{1}}--
 There are three ways to use this template. The easiest way is to use the
