@@ -76,6 +76,7 @@ AVR8js.build(sketch, files)
 
        if (e.hex) {
          let runner = AVR8js.execute(e.hex, console.log, id)
+         window.avrRunner = runner;//easy debuging access
 
          send.handle("input", (input) => {
             runner.serial(input.slice(0, -1))
