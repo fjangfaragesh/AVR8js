@@ -26,5 +26,13 @@
   "devDependencies": {
     "parcel": "^1.12.4",
     "typescript": "^4.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjangfaragesh/AVR8js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fjangfaragesh/AVR8js/issues"
+  },
+  "homepage": "https://github.com/fjangfaragesh/AVR8js#readme"
 }

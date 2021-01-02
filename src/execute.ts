@@ -63,7 +63,7 @@ export class AVRRunner {
     this.cpu.readHooks[usart0Config.UDR] = () => this.serialBuffer.shift() || 0;
   }
 
-  async execute(callback: (cpu: CPU) => void) {
+  async execute(callback: (cpu: CPU) => void, cyclesPerFrame: number = 500000, frameTimeout: number = 0) {
     this.stopped = false;
     for (;;) {
       avrInstruction(this.cpu);
@@ -72,9 +72,9 @@ export class AVRRunner {
       this.timer2.tick();
       this.usart.tick();
 
-      if (this.cpu.cycles % 500000 === 0) {
+      if (this.cpu.cycles % cyclesPerFrame === 0) {
         callback(this.cpu);
-        await new Promise((resolve) => setTimeout(resolve, 0));
+        await new Promise((resolve) => setTimeout(resolve, frameTimeout));
         if (this.stopped) {
           break;
         }

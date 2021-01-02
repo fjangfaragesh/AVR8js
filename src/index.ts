@@ -75,7 +75,7 @@ window.AVR8js = {
     return (await resp.json());
   },
 
-  execute: function (hex:string, log:any, id:string, MHZ: any) {
+  execute: function (hex:string, log:any, id:string, MHZ: any, cyclesPerFrame: number = 500000, frameTimeout: number = 0) {
     const PORTS:Array<PORT> = ["B", "C", "D"]
 
     const container = document.getElementById(id) || document
@@ -101,13 +101,13 @@ window.AVR8js = {
             port.setPin(pin % 8, false);
 
             button.addEventListener("button-press", () => {
-              if (runner) {
+              if (runner && pin && p === PORT) {
                 port.setPin(pin % 8, true);
               }
             });
 
             button.addEventListener("button-release", () => {
-              if (runner) {
+              if (runner && pin && p === PORT) {
                 port.setPin(pin % 8, false);
               }
             });
