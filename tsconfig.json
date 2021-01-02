@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "esnext",
+        "module": "system",
         "target": "es5",
         "lib": ["es6", "dom", "es2017"],
         "sourceMap": false,
@@ -17,7 +17,8 @@
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "baseUrl": "./src/",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "outFile": "./dist/index.js",
     },
     "include": [
         "./src/**/*"
