@@ -11,7 +11,7 @@ narrator: US English Male
 
 comment:  LiaScript template for the AVR8js simulator.
 
-script:   https://raw.githubusercontent.com/fjangfaragesh/AVR8js/main/dist/index.js
+script: https://raw.githubusercontent.com/fjangfaragesh/AVR8js/main/dist/index.js
 
 @AVR8js.sketch: @AVR8js.project(@0,sketch.ino)
 
