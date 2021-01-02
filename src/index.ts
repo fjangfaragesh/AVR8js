@@ -160,7 +160,7 @@ window.AVR8js = {
     runner.execute(cpu => {
       const time = formatTime(cpu.cycles / MHZ);
       if(timeSpan)
-        timeSpan.textContent = "Simulation time: " + time;
+        timeSpan.textContent = "Simulation time: " + time + " (cycles: " + cpu.cycles + ")";
     })
 
     return runner
